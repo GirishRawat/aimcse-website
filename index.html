@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+      <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -51,6 +56,9 @@
 
 
   <body>
+  	<div id="preloader">
+		<div id="status">&nbsp;</div>
+	</div>
 
     <!-- Fixed navbar -->
     <div class="navbar navbar-default navbar-fixed-top">
@@ -256,13 +264,15 @@
 		<hr>
 		<p class="centered">Created by BlackTie.co - Attribution License 3.0 - 2013</p>
 	</div><!-- /container -->
-	
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
+    	<script type="text/javascript">
+		//<![CDATA[
+			$(window).load(function() { // makes sure the whole site is loaded
+				$('#status').fadeOut(); // will first fade out the loading animation
+				$('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
+				$('body').delay(350).css({'overflow':'visible'});
+			})
+		//]]>
+	</script> 
   </body>
   <div class="se-pre-con"></div>
 </html>
