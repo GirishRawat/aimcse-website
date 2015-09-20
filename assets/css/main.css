@@ -40,6 +40,8 @@ h4 {
 	font-size: 20px;
 }
 
+
+
 /* Paragraph & Typographic */
 p {
     line-height: 28px;
@@ -119,6 +121,16 @@ i {
 	color: #3498db; 
 }
 
+.above {
+    position: relative;
+    color:#edeaea;
+    bottom:4px;
+}
+
+.event {
+    
+}
+
 
 /* HeaderWrap */
 #headerwrap {
@@ -140,6 +152,10 @@ i {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+}
+
+#above-margin {
+    color: #FFFFFF;
 }
 
 #headerwrap h1 {
